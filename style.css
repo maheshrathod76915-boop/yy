@@ -1,0 +1,2398 @@
+/* ==============================
+   HOTEL GAURAV - MAIN STYLES
+   ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #252525;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 16px 12px;
+    background: #111111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.25);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 16px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    background: #c9a45c;
+    color: #111111;
+}
+
+/* Home */
+#home {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #101010, #292929, #171717);
+    border-bottom: 3px solid #c9a45c;
+}
+
+#home .welcome-label {
+    color: #c9a45c;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 14px;
+}
+
+#home h1 {
+    color: #d4af37;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 800;
+    letter-spacing: 4px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    animation: hotelFadeIn 1s ease both;
+}
+
+#home h2 {
+    color: #ffffff;
+    font-size: clamp(18px, 3vw, 28px);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    animation: hotelFadeIn 1.3s ease both;
+}
+
+#home .home-tagline {
+    color: #dddddd;
+    font-size: 17px;
+    max-width: 600px;
+    animation: hotelFadeIn 1.6s ease both;
+}
+
+/* Home Buttons */
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: linear-gradient(135deg, #e0c16e, #b38a38);
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #c9a45c;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.home-btn:hover {
+    background: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.home-btn-outline {
+    background: transparent;
+    color: #e0c16e;
+}
+
+.home-btn-outline:hover {
+    background: #c9a45c;
+    border-color: #c9a45c;
+    color: #111111;
+}
+
+/* Animation */
+@keyframes hotelFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Common Sections */
+section {
+    padding: 75px 20px;
+    scroll-margin-top: 75px;
+}
+
+.section-heading {
+    text-align: center;
+    margin: 0 auto 35px;
+    max-width: 760px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.25;
+    margin-bottom: 12px;
+    color: #222222;
+}
+
+.section-heading > p:last-child {
+    color: #666666;
+}
+
+.section-label {
+    color: #987333;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.category-title {
+    text-align: center;
+    color: #8b6b3f;
+    font-size: 25px;
+    margin: 45px 0 10px;
+}
+
+/* Restaurant */
+#restaurant {
+    background: #f7f6f2;
+    text-align: center;
+}
+
+.food-container,
+.wine-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 22px;
+    max-width: 1200px;
+    margin: 20px auto 35px;
+}
+
+.food-card,
+.wine-card {
+    min-width: 0;
+    padding: 25px 18px;
+    background: #ffffff;
+    color: #252525;
+    border: 1px solid #e8e1d3;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.food-card:hover,
+.wine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 22px rgba(0, 0, 0, 0.13);
+}
+
+.food-card h3,
+.wine-card h3 {
+    color: #82602d;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.food-card p,
+.wine-card p {
+    font-size: 15px;
+    font-weight: bold;
+    color: #333333;
+}
+
+/* Wine and Beer */
+#wine {
+    text-align: center;
+    background: #efede7;
+}
+
+#wine .category-title {
+    margin-top: 40px;
+}
+
+/* Location */
+#location {
+    text-align: center;
+    background: #ffffff;
+}
+
+.location-box {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f8f7f3;
+    border: 1px solid #e7dfd0;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.location-box h3 {
+    color: #82602d;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.location-box p {
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+.map-container {
+    width: 100%;
+    margin-top: 25px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+/* Shared Location and Contact Buttons */
+.map-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 13px 27px;
+    background: linear-gradient(135deg, #c9a45c, #8b6b3f);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+.map-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact */
+#contact {
+    text-align: center;
+    background: #f7f6f2;
+}
+
+.contact-box {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    background: #ffffff;
+    border: 1px solid #e8e1d3;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.contact-box h3 {
+    color: #82602d;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.contact-box p {
+    margin: 15px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-box p a {
+    color: #82602d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    background: #111111;
+    color: #eeeeee;
+    text-align: center;
+    padding: 35px 18px 20px;
+    border-top: 3px solid #c9a45c;
+}
+
+.footer h3 {
+    color: #d4af37;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+    margin: 20px 0;
+}
+
+.footer a {
+    color: #eeeeee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #d4af37;
+}
+
+.footer .copyright {
+    border-top: 1px solid #444444;
+    padding-top: 15px;
+    margin-top: 20px;
+    color: #bbbbbb;
+    font-size: 13px;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+    nav {
+        gap: 3px;
+        padding: 10px 5px;
+    }
+
+    nav a {
+        padding: 8px 9px;
+        font-size: 13px;
+    }
+
+    #home {
+        min-height: 75vh;
+        padding: 55px 16px;
+    }
+
+    #home h1 {
+        letter-spacing: 2px;
+    }
+
+    #home h2 {
+        letter-spacing: 1px;
+    }
+
+    #home .welcome-label {
+        letter-spacing: 3px;
+    }
+
+    #home .home-tagline {
+        font-size: 15px;
+    }
+
+    .home-buttons {
+        gap: 10px;
+    }
+
+    .home-btn {
+        padding: 11px 18px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 45px 14px;
+    }
+
+    .category-title {
+        font-size: 22px;
+        margin-top: 32px;
+    }
+
+    .food-container,
+    .wine-container {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 0;
+    }
+
+    .food-card,
+    .wine-card {
+        padding: 21px 15px;
+    }
+
+    .location-box {
+        padding: 20px 14px;
+    }
+
+    .location-box h3 {
+        font-size: 19px;
+    }
+
+    .map-container iframe {
+        height: 280px;
+    }
+
+    .contact-box {
+        padding: 25px 16px;
+    }
+
+    .footer-links {
+        gap: 12px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* ==============================
+   HOTEL GAURAV - PREMIUM UPGRADE
+   ============================== */
+
+/* Better text rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+section {
+    position: relative;
+}
+
+/* Premium Navigation */
+nav {
+    background: rgba(17, 17, 17, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201, 164, 92, 0.25);
+}
+
+nav a {
+    transition: background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+}
+
+/* Section Heading */
+.section-heading h2 {
+    letter-spacing: -0.5px;
+}
+
+.section-heading > p:last-child {
+    font-size: 16px;
+}
+
+/* Category Titles */
+.category-title {
+    position: relative;
+    display: table;
+    margin: 48px auto 18px;
+    padding: 0 18px 10px;
+    color: #765326;
+}
+
+.category-title::after {
+    content: "";
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #c9a45c,
+        transparent
+    );
+    border-radius: 10px;
+}
+
+/* Food and Wine Cards */
+.food-container,
+.wine-container {
+    align-items: stretch;
+    gap: 20px;
+}
+
+.food-card,
+.wine-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e5d7bd;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(38, 28, 12, 0.06);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.food-card::before,
+.wine-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        #8b6b3f,
+        #e0c16e
+    );
+}
+
+.food-card:hover,
+.wine-card:hover {
+    transform: translateY(-6px);
+    border-color: #c9a45c;
+    box-shadow: 0 12px 28px rgba(64, 45, 15, 0.13);
+}
+
+.food-card h3,
+.wine-card h3 {
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.food-card p,
+.wine-card p {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 5px 12px;
+    background: #f8f2e6;
+    color: #765326;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+/* Buttons */
+.home-btn,
+.map-button {
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.home-btn:focus-visible,
+.map-button:focus-visible,
+nav a:focus-visible,
+.footer a:focus-visible {
+    outline: 3px solid #d4af37;
+    outline-offset: 4px;
+}
+
+/* Location and Contact */
+.location-box,
+.contact-box {
+    border-color: #e5d7bd;
+    box-shadow: 0 8px 28px rgba(38, 28, 12, 0.08);
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(
+        145deg,
+        #111111,
+        #242019
+    );
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 600px) {
+
+    nav {
+        gap: 4px;
+        padding: 10px 6px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .food-container,
+    .wine-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .food-card,
+    .wine-card {
+        padding: 20px 10px;
+        border-radius: 12px;
+    }
+
+    .food-card h3,
+    .wine-card h3 {
+        font-size: 15px;
+    }
+
+    .food-card p,
+    .wine-card p {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    .category-title {
+        font-size: 21px;
+        margin-top: 35px;
+    }
+
+    .section-heading > p:last-child {
+        font-size: 14px;
+    }
+}
+
+/* Very Small Screens */
+@media (max-width: 350px) {
+
+    .food-container,
+    .wine-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==============================
+   SOUP SPECIAL IMAGE CARDS
+   ============================== */
+
+.soup-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 25px auto 40px;
+}
+
+.soup-card {
+    padding: 0;
+    background: #ffffff;
+    border: 1px solid #e5d7bd;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(38, 28, 12, 0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.soup-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(64, 45, 15, 0.16);
+}
+
+.soup-image {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    background: #f5f1e8;
+}
+
+.soup-details {
+    padding: 20px 14px;
+    text-align: center;
+}
+
+.soup-details h3 {
+    color: #82602d;
+    font-size: 19px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+    overflow-wrap: anywhere;
+}
+
+.soup-details p {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 16px;
+    background: #f8f2e6;
+    color: #765326;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .soup-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .soup-image {
+        height: 220px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .soup-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .soup-image {
+        height: 150px;
+    }
+
+    .soup-details {
+        padding: 14px 8px;
+    }
+
+    .soup-details h3 {
+        font-size: 15px;
+    }
+
+    .soup-details p {
+        padding: 5px 9px;
+        font-size: 12px;
+    }
+}
+
+/* Very small mobile screens */
+@media (max-width: 350px) {
+    .soup-container {
+        grid-template-columns: 1fr;
+    }
+
+    .soup-image {
+        height: 220px;
+    }
+}
+/* ==============================
+   SOUP SPECIAL IMAGE CARDS
+   ============================== */
+
+.soup-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 25px auto 40px;
+}
+
+.soup-card {
+    padding: 0;
+    background: #ffffff;
+    border: 1px solid #e5d7bd;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(38, 28, 12, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soup-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(64, 45, 15, 0.16);
+}
+
+.soup-image {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    background: #f5f1e8;
+}
+
+.soup-details {
+    padding: 20px 14px;
+    text-align: center;
+}
+
+.soup-details h3 {
+    color: #82602d;
+    font-size: 19px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+    overflow-wrap: anywhere;
+}
+
+.soup-details p {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 16px;
+    background: #f8f2e6;
+    color: #765326;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .soup-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .soup-image {
+        height: 220px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .soup-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .soup-image {
+        height: 150px;
+    }
+
+    .soup-details {
+        padding: 14px 8px;
+    }
+
+    .soup-details h3 {
+        font-size: 15px;
+    }
+
+    .soup-details p {
+        padding: 5px 9px;
+        font-size: 12px;
+    }
+}
+
+/* Very Small Mobile Screens */
+@media (max-width: 350px) {
+    .soup-container {
+        grid-template-columns: 1fr;
+    }
+
+    .soup-image {
+        height: 220px;
+    }
+}
+
+/* Soup Section */
+.soup-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.soup-card {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.soup-image {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.soup-details {
+    padding: 12px;
+    text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .soup-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .soup-image {
+        height: 140px;
+    }
+}
+/* All Soup Cards - Small Size */
+.soup-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+}
+
+.soup-container .soup-card {
+width: 150px !important;
+height: auto !important;
+margin: 0;
+padding: 0;
+overflow: hidden;
+box-sizing: border-box;
+}
+
+/* All Soup Images */
+.soup-container .soup-image {
+width: 100% !important;
+height: 100px !important;
+object-fit: cover;
+display: block;
+}
+
+/* Soup Name */
+.soup-container .soup-details h3 {
+font-size: 14px;
+margin: 6px 0;
+}
+
+/* Soup Price */
+.soup-container .soup-details p {
+font-size: 12px;
+margin: 5px 0;
+padding-bottom: 5px;
+}
+
+/* Mobile Size */
+@media (max-width: 480px) {
+.soup-container .soup-card {
+width: 130px !important;
+}
+
+.soup-container .soup-image {
+    height: 90px !important;
+}
+
+}
+
+/* PAPAD SPECIAL - SMALL CARD DESIGN */
+
+.papad-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.papad-container .papad-card {
+    width: 100%;
+    max-width: 180px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.papad-container .papad-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+.papad-container .papad-card h3 {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 8px 0 5px;
+    overflow-wrap: break-word;
+}
+
+.papad-container .papad-card p {
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .papad-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .papad-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .papad-container .papad-card {
+        max-width: 100%;
+        padding: 6px;
+    }
+
+    .papad-container .papad-card img {
+        height: 85px;
+    }
+
+    .papad-container .papad-card h3 {
+        font-size: 13px;
+    }
+
+    .papad-container .papad-card p {
+        font-size: 12px;
+    }
+}
+
+/* Rice Special Card Design */
+
+.rice-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.rice-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.rice-card img {
+    display: block;
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.rice-card h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    overflow-wrap: break-word;
+}
+
+.rice-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .rice-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .rice-card img {
+        height: 120px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .rice-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .rice-card {
+        padding: 8px;
+    }
+
+    .rice-card img {
+        height: 110px;
+    }
+
+    .rice-card h3 {
+        font-size: 14px;
+    }
+
+    .rice-card p {
+        font-size: 13px;
+    }
+}
+
+.food-card .food-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Roti Special - Small Cards */
+.roti-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.roti-card {
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.roti-card .food-image {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+.roti-card h3 {
+    font-size: 14px;
+    margin: 8px 0 5px;
+}
+
+.roti-card p {
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+/* Mobile Screen */
+@media (max-width: 480px) {
+    .roti-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .roti-card .food-image {
+        height: 85px;
+    }
+}
+
+/* Roti Special Cards */
+.roti-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.roti-card {
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Bigger Food Images */
+.roti-card .food-image {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Food Name */
+.roti-card h3 {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* Price */
+.roti-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Mobile Screen */
+@media (max-width: 480px) {
+    .roti-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .roti-card .food-image {
+        height: 120px;
+    }
+
+    .roti-card h3 {
+        font-size: 14px;
+    }
+}
+.veg-snacks-container .food-card {
+    overflow: hidden;
+    text-align: center;
+}
+
+.veg-snacks-container .food-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.food-card {
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.food-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.food-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.food-card p {
+    margin: 5px 0;
+}
+
+/* Chicken Special */
+
+.chicken-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.chicken-card {
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.chicken-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.chicken-card h3 {
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+.chicken-card p {
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+/* Mobile Screen */
+
+@media (max-width: 480px) {
+    .chicken-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .chicken-image {
+        height: 120px;
+    }
+
+    .chicken-card h3 {
+        font-size: 14px;
+    }
+
+    .chicken-card p {
+        font-size: 13px;
+    }
+}
+.food-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.food-card {
+    overflow: hidden;
+}
+
+/* Beer Collection */
+.wine-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.wine-card {
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.wine-image {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.wine-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.wine-card p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* ==========================================================
+   FINAL RESPONSIVE CARD SYSTEM — Hotel Gaurav
+   This section intentionally overrides older duplicate rules.
+   ========================================================== */
+
+img {
+    max-width: 100%;
+}
+
+#restaurant,
+#wine {
+    overflow-x: clip;
+}
+
+.food-container,
+.wine-container {
+    width: min(100%, 1200px);
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+    grid-auto-rows: 1fr;
+}
+
+.food-card,
+.wine-card {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    min-height: 245px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.food-card > img,
+.wine-card > img,
+.food-card .food-image,
+.food-card .chicken-image {
+    display: block;
+    width: 100%;
+    height: 165px;
+    min-height: 165px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    flex: 0 0 165px;
+}
+
+.food-card h3,
+.wine-card h3 {
+    min-height: 2.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px 0 5px;
+    font-size: 16px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.food-card p,
+.wine-card p {
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: 3px;
+}
+
+.soup-container,
+.papad-container {
+    align-items: stretch;
+    grid-auto-rows: 1fr;
+}
+
+.soup-container .soup-card,
+.papad-container .papad-card {
+    width: 100% !important;
+    max-width: none;
+    min-width: 0;
+    height: 100% !important;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.soup-container .soup-image {
+    width: 100% !important;
+    height: 180px !important;
+    min-height: 180px;
+    object-fit: cover;
+    flex: 0 0 180px;
+}
+
+.soup-container .soup-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 8px;
+}
+
+.soup-container .soup-details h3 {
+    min-height: 2.8em;
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.soup-container .soup-details p {
+    align-self: center;
+    margin-top: auto;
+}
+
+.papad-container .papad-card img {
+    width: 100%;
+    height: 120px;
+    min-height: 120px;
+    object-fit: cover;
+    flex: 0 0 120px;
+}
+
+.papad-container .papad-card h3 {
+    min-height: 2.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 601px) {
+    .food-container,
+    .wine-container {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .soup-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .papad-container {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    html {
+        scroll-padding-top: 100px;
+    }
+
+    nav {
+        gap: 4px;
+        padding: 8px 5px;
+    }
+
+    nav a {
+        padding: 8px 9px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 38px 12px;
+    }
+
+    .section-heading {
+        margin-bottom: 24px;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .food-container,
+    .wine-container,
+    .soup-container,
+    .papad-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 0;
+    }
+
+    .food-card,
+    .wine-card {
+        min-height: 210px;
+        padding: 8px;
+        border-radius: 12px;
+    }
+
+    .food-card > img,
+    .wine-card > img,
+    .food-card .food-image,
+    .food-card .chicken-image {
+        height: 115px;
+        min-height: 115px;
+        flex-basis: 115px;
+    }
+
+    .food-card h3,
+    .wine-card h3 {
+        min-height: 2.8em;
+        font-size: 13px;
+        line-height: 1.3;
+        margin: 7px 0 4px;
+    }
+
+    .food-card p,
+    .wine-card p {
+        font-size: 12px;
+        padding: 4px 7px;
+        margin-top: auto;
+    }
+
+    .soup-container .soup-image {
+        height: 115px !important;
+        min-height: 115px;
+        flex-basis: 115px;
+    }
+
+    .soup-container .soup-details {
+        padding: 9px 5px;
+    }
+
+    .soup-container .soup-details h3 {
+        min-height: 2.8em;
+        font-size: 13px;
+        line-height: 1.3;
+    }
+
+    .soup-container .soup-details p {
+        font-size: 12px;
+        padding: 4px 7px;
+    }
+
+    .papad-container .papad-card img {
+        height: 100px;
+        min-height: 100px;
+        flex-basis: 100px;
+    }
+
+    .papad-container .papad-card h3 {
+        min-height: 2.8em;
+        font-size: 12px;
+    }
+
+    .category-title {
+        font-size: 21px;
+        margin-top: 32px;
+    }
+
+    .location-box,
+    .contact-box {
+        padding: 20px 12px;
+    }
+}
+
+@media (max-width: 350px) {
+    nav a {
+        padding: 7px 6px;
+        font-size: 11px;
+    }
+
+    .food-container,
+    .wine-container,
+    .soup-container,
+    .papad-container {
+        gap: 8px;
+    }
+
+    .food-card,
+    .wine-card {
+        padding: 6px;
+    }
+
+    .food-card > img,
+    .wine-card > img,
+    .food-card .food-image,
+    .food-card .chicken-image,
+    .soup-container .soup-image {
+        height: 95px !important;
+        min-height: 95px;
+        flex-basis: 95px;
+    }
+}
+
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: #222;
+    flex-wrap: wrap;
+}
+
+.language-switcher button {
+    padding: 10px 18px;
+    border: 2px solid #d4a017;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #222;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.language-switcher button:hover,
+.language-switcher button.active {
+    background-color: #d4a017;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .language-switcher {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .language-switcher button {
+        padding: 9px 14px;
+        font-size: 14px;
+    }
+}
+
+/* Language Buttons at the Top */
+.language-switcher {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: #111;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 9999;
+}
+
+.language-switcher button {
+    padding: 9px 16px;
+    background: #fff;
+    color: #111;
+    border: 2px solid #d4a017;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.language-switcher button:hover,
+.language-switcher button.active {
+    background: #d4a017;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    .language-switcher {
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .language-switcher button {
+        font-size: 14px;
+        padding: 8px 13px;
+    }
+}
+
+/* Wine Collection */
+.wine-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.wine-card {
+    min-width: 0;
+    overflow: hidden;
+    text-align: center;
+    padding: 12px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.wine-card img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.wine-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+.wine-card p {
+    font-size: 16px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .wine-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .wine-card img {
+        height: 150px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+    .wine-card {
+        padding: 8px;
+    }
+
+    .wine-card img {
+        height: 120px;
+    }
+
+    .wine-card h3 {
+        font-size: 15px;
+    }
+
+    .wine-card p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+/* ===== BILINGUAL MENU NAMES (English + Marathi) ===== */
+/* ===== PAPAD CARDS: CONSISTENT SIZES ===== */
+.papad-container {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 16px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.papad-container .papad-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    min-height: 225px;
+    padding: 10px;
+    align-items: stretch;
+}
+.papad-container .papad-card img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    flex: 0 0 125px;
+}
+.papad-container .papad-card h3 {
+    min-height: 42px;
+    margin: 8px 0 2px;
+}
+.papad-container .papad-card p {
+    margin-top: auto;
+}
+@media (max-width: 900px) {
+    .papad-container { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+    .papad-container { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .papad-container .papad-card { min-height: 205px; padding: 7px; }
+    .papad-container .papad-card img { height: 100px; flex-basis: 100px; }
+    .papad-container .papad-card h3 { min-height: 38px; font-size: 13px; }
+}
+
+/* SOUP SPECIAL */
+.soup-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Same Size Cards */
+.soup-container .soup-card {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+}
+
+/* Same Size Images */
+.soup-container .soup-image {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Card Details */
+.soup-container .soup-details {
+    padding: 10px 5px;
+}
+
+.soup-container .soup-details h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.soup-container .soup-details p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+    .soup-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .soup-container .soup-image {
+        height: 130px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+    .soup-container {
+        gap: 8px;
+    }
+
+    .soup-container .soup-image {
+        height: 110px;
+    }
+
+    .soup-container .soup-details h3 {
+        font-size: 13px;
+    }
+
+    .soup-container .soup-details p {
+        font-size: 12px;
+    }
+}
+
+
+
+/* ==============================
+   FINAL RESPONSIVE CARD FIXES
+   These rules intentionally override older duplicate card rules above.
+   ============================== */
+
+/* Consistent four-card row on desktop */
+.food-container,
+.wine-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto 35px;
+    padding: 0;
+    align-items: stretch;
+}
+
+/* Equal card sizing and predictable layout */
+.food-container .food-card,
+.wine-container .wine-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Keep food photos consistent without stretching them */
+.food-card img,
+.wine-card img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    flex: 0 0 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 7px;
+}
+
+/* Bottle photos should show the whole bottle */
+.wine-card img {
+    object-fit: contain;
+    background: #fff;
+}
+
+/* Align card titles and prices */
+.food-card h3,
+.wine-card h3 {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8px 0 5px;
+    font-size: 15px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.food-card p,
+.wine-card p {
+    align-self: center;
+    margin-top: auto;
+    font-size: 13px;
+}
+
+/* Soup uses its own image/detail layout */
+.soup-container .soup-card {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.soup-container .soup-image {
+    height: 150px;
+    flex: 0 0 150px;
+}
+.soup-container .soup-details h3 {
+    min-height: 38px;
+}
+.soup-container .soup-details p {
+    margin-top: 0;
+}
+
+/* Papad images and titles stay consistent */
+.papad-container .papad-card img {
+    width: 100%;
+    height: 120px;
+    flex: 0 0 120px;
+    object-fit: cover;
+}
+.papad-container .papad-card h3 {
+    min-height: 42px;
+}
+
+/* Language switcher remains visible at the top */
+.language-switcher {
+    position: relative;
+    top: auto;
+}
+
+/* Tablet: three cards per row */
+@media (max-width: 900px) {
+    .food-container,
+    .wine-container,
+    .papad-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+    .food-card img,
+    .wine-card img {
+        height: 135px;
+        flex-basis: 135px;
+    }
+}
+
+/* Mobile: two cards per row */
+@media (max-width: 600px) {
+    .food-container,
+    .wine-container,
+    .papad-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 0;
+    }
+    .food-container .food-card,
+    .wine-container .wine-card {
+        padding: 7px;
+        border-radius: 10px;
+    }
+    .food-card img,
+    .wine-card img {
+        height: 105px;
+        flex-basis: 105px;
+    }
+    .food-card h3,
+    .wine-card h3 {
+        min-height: 38px;
+        font-size: 13px;
+    }
+    .food-card p,
+    .wine-card p {
+        font-size: 12px;
+        padding: 4px 7px;
+    }
+    .soup-container .soup-image {
+        height: 105px;
+        flex-basis: 105px;
+    }
+}
+
+/* Very narrow phones */
+@media (max-width: 350px) {
+    .food-container,
+    .wine-container,
+    .papad-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+    .food-card img,
+    .wine-card img {
+        height: 85px;
+        flex-basis: 85px;
+    }
+}
+
+
+/* ==========================================================
+   FINAL RESPONSIVE FIX — consistent cards and language buttons
+   Keep this block at the VERY END of style.css.
+   ========================================================== */
+
+.language-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 14px;
+    background: #f7f3ea;
+    border-bottom: 1px solid #e5d7bd;
+}
+
+.language-switcher button {
+    appearance: none;
+    border: 1px solid #b38a38;
+    border-radius: 24px;
+    padding: 9px 18px;
+    background: #ffffff;
+    color: #5f451f;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.language-switcher button:hover,
+.language-switcher button.active {
+    background: #b38a38;
+    color: #ffffff;
+}
+
+.language-switcher button:focus-visible {
+    outline: 3px solid #d4af37;
+    outline-offset: 3px;
+}
+
+/* Four cards per row on wide screens */
+.food-container,
+.wine-container,
+.soup-container,
+.papad-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 18px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 22px auto 38px;
+}
+
+/* Uniform card sizing */
+.food-container .food-card,
+.wine-container .wine-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 100%;
+    margin: 0;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.food-container .food-card img,
+.wine-container .wine-card img {
+    display: block;
+    width: 100%;
+    height: 155px;
+    flex: 0 0 155px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+/* Bottle photos: show the complete bottle */
+.wine-container .wine-card img {
+    object-fit: contain;
+    background: #ffffff;
+}
+
+.food-container .food-card h3,
+.wine-container .wine-card h3 {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 9px 0 6px;
+    font-size: 15px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.food-container .food-card p,
+.wine-container .wine-card p {
+    align-self: center;
+    margin-top: auto;
+    font-size: 13px;
+}
+
+/* Soup cards have image + details inside the card */
+.soup-container .soup-card {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.soup-container .soup-image {
+    display: block;
+    width: 100%;
+    height: 155px;
+    flex: 0 0 155px;
+    object-fit: cover;
+}
+.soup-container .soup-details {
+    flex: 1;
+    padding: 12px 8px;
+    text-align: center;
+}
+.soup-container .soup-details h3 {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 1.35;
+}
+.soup-container .soup-details p {
+    margin: 0;
+}
+
+/* Papad cards follow the same grid and image sizing */
+.papad-container .papad-card {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
+}
+.papad-container .papad-card img {
+    display: block;
+    width: 100%;
+    height: 155px;
+    flex: 0 0 155px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.papad-container .papad-card h3 {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 1.35;
+}
+.papad-container .papad-card p {
+    margin-top: auto;
+}
+
+/* Tablet: three cards per row */
+@media (max-width: 900px) {
+    .food-container,
+    .wine-container,
+    .soup-container,
+    .papad-container {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .food-container .food-card img,
+    .wine-container .wine-card img,
+    .papad-container .papad-card img,
+    .soup-container .soup-image {
+        height: 135px;
+        flex-basis: 135px;
+    }
+}
+
+/* Phones: two cards per row */
+@media (max-width: 600px) {
+    section {
+        padding: 42px 12px;
+    }
+
+    .food-container,
+    .wine-container,
+    .soup-container,
+    .papad-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        padding: 0;
+    }
+
+    .food-container .food-card,
+    .wine-container .wine-card,
+    .papad-container .papad-card {
+        padding: 7px;
+        border-radius: 11px;
+    }
+
+    .food-container .food-card img,
+    .wine-container .wine-card img,
+    .papad-container .papad-card img,
+    .soup-container .soup-image {
+        height: 108px;
+        flex-basis: 108px;
+    }
+
+    .food-container .food-card h3,
+    .wine-container .wine-card h3,
+    .papad-container .papad-card h3,
+    .soup-container .soup-details h3 {
+        min-height: 38px;
+        font-size: 13px;
+        margin: 7px 0 5px;
+    }
+
+    .food-container .food-card p,
+    .wine-container .wine-card p,
+    .papad-container .papad-card p,
+    .soup-container .soup-details p {
+        font-size: 12px;
+        padding: 4px 7px;
+    }
+
+    .soup-container .soup-details {
+        padding: 8px 5px;
+    }
+}
+
+/* Narrow phones: still two cards per row */
+@media (max-width: 350px) {
+    .food-container,
+    .wine-container,
+    .soup-container,
+    .papad-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .food-container .food-card img,
+    .wine-container .wine-card img,
+    .papad-container .papad-card img,
+    .soup-container .soup-image {
+        height: 88px;
+        flex-basis: 88px;
+    }
+
+    .food-container .food-card,
+    .wine-container .wine-card,
+    .papad-container .papad-card {
+        padding: 5px;
+    }
+}
+
